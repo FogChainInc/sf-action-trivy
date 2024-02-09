@@ -54,8 +54,6 @@ fi
 JSON_DATA_STRING="
 {
   \"apiKey\": \"$SOFTWAREFACTORY_TOKEN\",
-  \"company_id\": \"0\",
-  \"user_id\": \"0\",
   \"url\": \"$SCAN_TARGET_URL\",
   \"token\": \"$SCAN_PAT\"
 }"
