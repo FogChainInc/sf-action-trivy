@@ -1,0 +1,21 @@
+name: SF Action - Trivy Scan
+on:
+  push:
+    branches:
+      - main
+      - master
+      - develop
+      - 'releases/**'
+
+run-name: SF Action 🚀 Aqua Trivy Scan
+jobs:
+  SF-Trivy-Scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: </> SF Aqua Trivy Scan
+        uses: FogChainInc/sf-action-trivy-scan@main
+        env:
+          SOFTWAREFACTORY_HOST_URL: ${{ secrets.SOFTWAREFACTORY_HOST_URL }}
+          SOFTWAREFACTORY_TOKEN: ${{ secrets.SOFTWAREFACTORY_TOKEN }}
+          SCAN_PAT: ${{ secrets.SCAN_TARGET_PAT }}
+          SCAN_TARGET_URL: ${{ vars.SCAN_TARGET_URL }}
